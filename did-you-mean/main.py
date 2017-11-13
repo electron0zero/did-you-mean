@@ -27,9 +27,7 @@ def main():
             flash('required')
             return render_template('index.html', form=form)
         else:
-            app.logger.info("Query: ", form.search_key.data)
             result = segment_and_correct(form.search_key.data)
-            app.logger.info(result)
             return render_template('main.html', form=form, result=result)
     elif request.method == 'GET':
         return render_template('index.html', form=form)
@@ -37,19 +35,14 @@ def main():
 
 def segment_and_correct(query):
     tokens = word_tokenize(query)
-    app.logger.info(tokens)
-
     final_text = ""
-
     for token in tokens:
         segments = segment(spell(token))
-        app.logger.info(segments)
         if len(segments) > 1:
             for word in segments:
                 final_text = final_text + spell(word) + " "
         else:
             final_text = final_text + segments[0] + " "
-
     return final_text
 
 
