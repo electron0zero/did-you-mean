@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+{% include 'form.html' %}
+
+<!-- results section -->
+<div id="results" class="mdl-grid">
+    <div class="mdl-layout-spacer"></div>
+    <div class="mdl-cell">
+        <div>
+            <!--Results-->
+            <!--iterate through to render each result-->
+            {% for result in results %}
+            <div>
+                <b>Result:</b> {{ result }}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="mdl-layout-spacer"></div>
+</div>
+
+{% endblock %}

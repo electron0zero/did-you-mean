@@ -1,3 +1,4 @@
+# adopted from GitHub: https://github.com/github/gitignore
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -43,7 +44,7 @@ htmlcov/
 .cache
 nosetests.xml
 coverage.xml
-*.cover
+*,cover
 .hypothesis/
 
 # Translations
@@ -89,13 +90,9 @@ ENV/
 
 # Spyder project settings
 .spyderproject
-.spyproject
 
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
+# VScode
+.vscode

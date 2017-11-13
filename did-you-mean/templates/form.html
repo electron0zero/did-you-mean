@@ -1,0 +1,17 @@
+<div id="form" class="mdl-grid">
+    <div class="mdl-layout-spacer"></div>
+    <div class="mdl-cell">
+        <form action="/" method=post>
+            <h2>Did you mean?</h2>
+            {{ form.hidden_tag() }}
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                {% for field in form %} {% if field.type is equalto 'TextField' %} {{ field.label(class_="mdl-textfield__label") }} {{ field(class_="mdl-textfield__input")
+                }} {% elif field.type == 'SubmitField' %} {% endif %}
+                <!-- {{ field.label }}{{ field }} -->
+                {% endfor %}
+            </div>
+            <br/>
+        </form>
+    </div>
+    <div class="mdl-layout-spacer"></div>
+</div>
