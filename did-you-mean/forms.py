@@ -1,9 +1,8 @@
 # forms
-from flask_wtf import Form
-from wtforms import TextField, SubmitField, ValidationError, validators, BooleanField
+from flask_wtf import FlaskForm
+from wtforms import TextField, SubmitField, ValidationError, validators
 
 
-class QueryForm(Form):
+class QueryForm(FlaskForm):
     search_key = TextField("Type and press Enter", [validators.Required("required")])
-    title = BooleanField('Title', default=False)
     submit = SubmitField("Search")

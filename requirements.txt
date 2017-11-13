@@ -3,3 +3,6 @@ Flask==0.12
 Flask-WTF==0.14.2
 Jinja2==2.9.5
 WTForms==2.1
+wordsegment==1.1.6
+autocorrect==0.3.0
+nltk==3.2.3
