@@ -5,8 +5,6 @@ from forms import QueryForm
 import config
 import json
 
-# from wtforms.validators import DataRequired
-
 # creating flask app
 app = Flask(__name__)
 
