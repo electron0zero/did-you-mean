@@ -9,6 +9,7 @@ Did you mean this?
     - `import nltk`
     - run `nltk.download()`
     - download `punkt` punkt Tokeniser model 
+    or just run `python -m nltk.downloader punkt`
 - `cd` into `did-you-mean`
 - run Flask development server using `python main.py`
 
