@@ -4,6 +4,11 @@ Did you mean this?
 
 ## How to
 - install dependencies using `pip install -r requirements.txt`
+- install NLTK coupse using `nltk.download()`
+    - go to python shell
+    - `import nltk`
+    - run `nltk.download()`
+    - download `punkt` punkt Tokeniser model 
 - `cd` into `did-you-mean`
 - run Flask development server using `python main.py`
 
