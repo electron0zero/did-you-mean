@@ -41,10 +41,14 @@ def segment_and_correct(payload, spelling, segmenting):
     if (segmenting and spelling):
         segmented = segment_tokens(tokens)
         final_tokens = spell_tokens(segmented)
-    if (segment and not spelling):
+    elif (not segmenting and not spelling):
+        print("do nothing")
+        final_tokens = tokens
+    elif (segment and not spelling):
         final_tokens = segment_tokens(tokens)
-    if (spelling and not segmenting):
+    elif (spelling and not segmenting):
         final_tokens = spell_tokens(tokens)
+
     final_text = " ".join(final_tokens)
     # print("is it same: ", is_it_equal(payload, final_text))
     return final_text
